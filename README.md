@@ -2,7 +2,7 @@
 ```
 * SLOWDNS SCRIPT
 ```
-![logo](https://raw.githubusercontent.com/casper9/Slowdns/main/casper9.png)
+![logo](https://raw.githubusercontent.com/casper9/Slowdns/main/TARAP-KUHING.png)
 
 ```
 THIS IS A SCRIPT FOR AUTO INSTALLATION OF SLOWDNS (DNSTT SERVER) WITH:
