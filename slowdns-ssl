@@ -69,8 +69,28 @@ echo ""
 echo -e "\033[1;31m ATTENTION IN THIS STAGE! \033[1;33m"
 echo ""
 cd /etc/slowdns
-#echo -ne "\033[1;32m ENTER YOUR NS (NAMESERVER)\033[1;37m: "; read nameserver
+#echo -e "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
+#echo -e "               ${tyblue}         Please select a NameServer type below             ${NC}"
+#echo -e "               ${tyblue}└──────────────────────────────────────────┘${NC}"
+#echo -e "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
+#echo -e "               ${tyblue}           [ 1 ]  Enter your NameServer                    ${NC}"
+#echo -e "               ${tyblue}           [ 2 ]  Use a admin NameServer                   ${NC}"
+#echo -e "               ${tyblue}└──────────────────────────────────────────┘${NC}"
+#read -p "   Please select numbers 1-2 or Any Button(Random) : " nameserver
+echo ""
+#if [[ $nameserver == "1" ]]; then
+echo -ne "\033[1;32m ENTER YOUR NS (NAMESERVER)\033[1;37m: "; read nameserver
+#nameserver=$nameserver
+#touch infons
+#echo $nameserver > infons
+clear
+$elif [[ $nameserver == "2" ]]; then
+#nameserver=`cat /root/nsdomain`
+#clear
+#else
 nameserver=`cat /root/nsdomain`
+#clear
+#fi
 touch infons
 echo $nameserver > infons
 set_ns () {
@@ -178,7 +198,7 @@ Option3 () {
 echo -e "Downloading default key pair..."
 cd
 rm server.key server.pub
-wget https://raw.githubusercontent.com/casper9/Slowdns/main/server.key
+wget https://raw.githubusercontent.com/casper/Slowdns/main/server.key
 wget https://raw.githubusercontent.com/casper9/Slowdns/main/server.pub
 cp server.key /etc/slowdns/ && cp server.pub /etc/slowdns/
 sleep 1
